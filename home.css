@@ -1,9 +1,9 @@
 body {
   background-color: #111;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -20,4 +20,56 @@ h3 {
   font-weight: 400;
   color: whitesmoke;
   text-shadow: 0px 1px 3px rgba(255, 255, 255, 1);
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+
+.mobile-toggle {
+  display: block;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
 }
