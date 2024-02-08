@@ -12,6 +12,7 @@ body {
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
+  x-overflow: none;
   max-height: 100vh;
   background-color: transparent;
   margin: 50px 50px 50px 50px;
@@ -44,6 +45,9 @@ header {
 
 nav {
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   z-index: 999;
